@@ -22,5 +22,5 @@ The working directory contains the files and folders extracted from the data set
 
 ### Step 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 - Set "subject" as the column name of the subject data frame
-- Merge the subject data frame with the tidy data set from step 4 into new data frame
-- Summarize the above data frame using "ddplyr" package 
+- Merge the subject data frame with the tidy data set from step 4 into temporary data frame
+- Aggregate the temporary data frame by subject and activity using "mean" (or average) function 
