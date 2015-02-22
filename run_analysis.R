@@ -26,4 +26,6 @@ colnames(tidySet) <- c("activity",as.character(featuresEx[,2]))
 
 ## 5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 colnames(subject) <- "subject"
-tidySet2 <- cbind(subject,tidySet)
+temp <- cbind(subject,tidySet)
+tidySet2 <- aggregate(temp[,c(-1,-2)],by=list(subject=temp$subject,activity=temp$activity),FUN="mean")
+
